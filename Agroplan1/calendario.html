@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroPlan - Planificador de Cultivos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>AgroPlan -calendario y Planificador</h1>
+</header>
+    <nav>
+        <ul>
+            <li><a href="/inicio.html">inicio</a></li>
+            <li><a href="/calendario.html">calendario</a></li>
+            <li><a href="/productos.html">productos</a></li>
+        </ul>
+    </nav>
+<div class="container">
+    <!-- Calendario -->
+    <div class="section" id="calendar-section">
+        <h2>Calendario de Cultivos</h2>
+        <div id="calendar" class="small-calendar"></div>
+    </div>
+
+    <!-- Detalles del Evento -->
+    <div id="detalles-evento" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;">
+        <h3>Detalles de la siembra</h3>
+        <p id="detalle-titulo">Haz clic en un evento para ver los detalles aquí.</p>
+        <p id="detalle-fecha"></p>
+        <button id="eliminar-evento" style="display: none;">Eliminar Evento</button>
+    </div>
+    
+    <!-- Formulario de siembra -->
+    <div class="section" id="planificar-section">
+        <h2>Planificar Siembra</h2>
+        <form id="siembra-form">
+            <div class="form-group">
+                <label for="cultivo">Seleccionar Cultivo:</label>
+                <select id="cultivo">
+                    <option value="maiz">Maíz</option>
+                    <option value="arroz">Arroz</option>
+                    <option value="trigo">Trigo</option>
+                    <option value="Tomates">Tomates</option>
+                    <option value="Papas">Papas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="area">Área a Sembrar (ha):</label>
+                <input type="number" id="area" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Siembra:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <button type="submit">Planificar</button>
+        </form>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
